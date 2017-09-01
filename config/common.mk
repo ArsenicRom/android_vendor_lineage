@@ -121,6 +121,11 @@ PRODUCT_PACKAGES += \
     PhotoTable \
     Terminal
 
+# Themes
+PRODUCT_PACKAGES += \
+    PixelTheme \
+    Stock	
+
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
