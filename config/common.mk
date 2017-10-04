@@ -40,12 +40,12 @@ endif
 # LatineIME Gesture swyping
 ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
-    vendor/liquid/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/lineage/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
+    vendor/lineage/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 else
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
-    vendor/liquid/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
+    vendor/lineage/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
+    vendor/lineage/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
 endif
 
 # Backup Tool
@@ -88,7 +88,7 @@ PRODUCT_COPY_FILES += \
 
 # Google Dialer
 PRODUCT_COPY_FILES +=  \
-    vendor/liquid/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml 
+    vendor/lineage/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml 
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -390,3 +390,4 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 -include vendor/lineage/config/partner_gms.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
+$(call inherit-product-if-exists, vendor/lineage/prebuilt/common/prebuilt.mk)
