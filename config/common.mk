@@ -137,6 +137,10 @@ PRODUCT_PACKAGES += \
     PhotoTable \
     Terminal
 
+# Fix Google dialer
+PRODUCT_COPY_FILES += \
+    vendor/havoc/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
