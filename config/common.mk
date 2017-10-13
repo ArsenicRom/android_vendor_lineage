@@ -156,7 +156,8 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     Updater \
     WallpaperPicker \
-    WeatherProvider
+    WeatherProvider \
+    OmniJaws
 
 # Exchange support
 PRODUCT_PACKAGES += \
