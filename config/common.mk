@@ -164,7 +164,8 @@ PRODUCT_PACKAGES += \
     Updater \
     WallpaperPicker \
     WeatherProvider \
-    OmniJaws
+    OmniJaws \
+    OmniStyle
 
 # Exchange support
 PRODUCT_PACKAGES += \
