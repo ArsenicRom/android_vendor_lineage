@@ -121,7 +121,7 @@ endif
 
 # AR
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/calibration_cad.xml:system/etc/calibration_cad.xml
+    vendor/lineage/prebuilt/common/etc/calibration_cad.xml:system/etc/calibration_cad.xml
 
 # TWRP
 ifeq ($(WITH_TWRP),true)
@@ -266,6 +266,16 @@ endif
 endif
 
 DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/common
+
+# Themes
+$(call inherit-product, vendor/lineage/Themes/Themes.mk)
+
+PRODUCT_PACKAGES += \
+    Blue \
+    Green \
+    Pixel \
+    Red \
+    Stock
 
 PRODUCT_VERSION_MAJOR = 15
 PRODUCT_VERSION_MINOR = 1
