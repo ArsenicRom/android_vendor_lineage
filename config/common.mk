@@ -170,6 +170,10 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider
 
+# Arsenic Packages
+PRODUCT_PACKAGES += \
+    SoundPickerPrebuilt
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
