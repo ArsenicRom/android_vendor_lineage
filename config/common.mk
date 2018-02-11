@@ -12,7 +12,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
-    ro.setupwizard.rotation_locked=true
+    ro.setupwizard.rotation_locked=true \
+    ro.config.calibration_cad=/system/etc/calibration_cad.xml
 
 # Default notification/alarm sounds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -117,6 +118,10 @@ ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
 # Lineage SDK
 include vendor/lineage/config/lineage_sdk_common.mk
 endif
+
+# AR
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/calibration_cad.xml:system/etc/calibration_cad.xml
 
 # TWRP
 ifeq ($(WITH_TWRP),true)
