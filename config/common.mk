@@ -165,7 +165,8 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider \
     OmniJaws \
-    OmniStyle
+    OmniStyle \
+    DU-Fonts
 
 # Exchange support
 PRODUCT_PACKAGES += \
