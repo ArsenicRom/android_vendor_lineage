@@ -271,6 +271,15 @@ DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/common
 # Themes
 $(call inherit-product, vendor/lineage/Themes/Themes.mk)
 
+# UI Variants
+PRODUCT_PACKAGES += \
+    SystemDarkTheme \
+    SettingsDarkTheme \
+    DuiDarkTheme \
+    SystemBlackTheme \
+    SettingsBlackTheme \
+    DuiBlackTheme
+
 PRODUCT_PACKAGES += \
     Blue \
     Green \
