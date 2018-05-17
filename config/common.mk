@@ -127,15 +127,6 @@ endif
 PRODUCT_PACKAGES += \
     bootanimation.zip
 
-# CAF Telephony Library
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
-# CAF Telepony Packages
-PRODUCT_PACKAGES += \
-    telephony-ext \
-    ims-ext-common
-
 # Required Lineage packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
