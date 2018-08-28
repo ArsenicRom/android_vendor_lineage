@@ -11,6 +11,9 @@ type Product_variables struct {
 	Device_support_hwfde_perf struct {
 		Cflags []string
 	}
+	Device_support_legacy_hwfde struct {
+		Cflags []string
+	}
 	Apply_msm8974_1440p_egl_workaround struct {
 		Cflags []string
 	}
@@ -56,7 +59,11 @@ type ProductVariables struct {
 	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 	Device_support_hwfde  *bool `json:",omitempty"`
 	Device_support_hwfde_perf  *bool `json:",omitempty"`
+<<<<<<< HEAD
 	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
+=======
+	Device_support_legacy_hwfde  *bool `json:",omitempty"`
+>>>>>>> 56d5b0c... soong_config: Add flag for legacy HW FDE
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Java_Source_Overlays *string `json:",omitempty"`
 	Should_skip_waiting_for_qsee  *bool `json:",omitempty"`
