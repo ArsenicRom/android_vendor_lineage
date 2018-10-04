@@ -139,12 +139,22 @@ PRODUCT_PACKAGES += \
 
 # Fix Google dialer
 PRODUCT_COPY_FILES += \
-    vendor/havoc/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+    vendor/lineage/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
+
+# Latin IME lib
+ifeq ($(TARGET_ARCH),arm64)
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+    vendor/lineage/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
+else
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+endif
 
 # Custom Lineage packages
 PRODUCT_PACKAGES += \
