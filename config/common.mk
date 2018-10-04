@@ -172,7 +172,13 @@ PRODUCT_PACKAGES += \
 
 # Arsenic Packages
 PRODUCT_PACKAGES += \
+    PixelLauncher \
     SoundPickerPrebuilt
+
+# Sysconfig
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/etc/sysconfig/google-hiddenapi-package-whitelist.xml:system/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
+    vendor/lineage/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
 
 # Exchange support
 PRODUCT_PACKAGES += \
