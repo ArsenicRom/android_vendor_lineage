@@ -17,7 +17,31 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     keyguard.no_require_sim=true
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.build.selinux=1
+    keyguard.no_require_sim=true \
+    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
+    ro.com.google.clientidbase=android-google \
+    ro.com.android.wifi-watchlist=GoogleGuest \
+    ro.setupwizard.enterprise_mode=1 \
+    ro.setupwizard.network_required=false \
+    ro.setupwizard.gservices_delay=-1 \
+    ro.com.android.dataroaming=false \
+    drm.service.enabled=true \
+    net.tethering.noprovisioning=true \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0 \
+    ro.adb.secure=0 \
+    ro.build.selinux=1 \
+    ro.setupwizard.rotation_locked=true \
+    ro.opa.eligible_device=true \
+    persist.sys.disable_rescue=true
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
+    ro.adb.secure=0 \
+    ro.debuggable=1 \
+    ro.secure=0 \
+    persist.service.adb.enable=1 \
+    persist.sys.usb.config=mtp,adb
 
 # Default notification/alarm sounds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -27,14 +51,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
-endif
-
-ifeq ($(TARGET_BUILD_VARIANT),eng)
-# Disable ADB authentication
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
-else
-# Enable ADB authentication
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
