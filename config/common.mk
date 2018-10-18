@@ -237,6 +237,13 @@ PRODUCT_PACKAGES += \
     UserSix \
     UserSeven
 
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStileCircleTrim \
+    QStileDefault \
+    QStileDualToneCircle \
+    QStileSquircleTrim
+
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/havoc/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml
