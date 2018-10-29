@@ -199,6 +199,10 @@ PRODUCT_PACKAGES += \
     PixelLauncher \
     SoundPickerPrebuilt
 
+# Weather
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml
+
 # Themes
 PRODUCT_PACKAGES += \
     SettingsDarkTheme \
