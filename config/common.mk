@@ -203,6 +203,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml
 
+# Substratum Key
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/priv-app/SubstratumKey.apk:system/priv-app/SubstratumKey/SubstratumKey.apk
+	
 # Themes
 PRODUCT_PACKAGES += \
     SettingsDarkTheme \
