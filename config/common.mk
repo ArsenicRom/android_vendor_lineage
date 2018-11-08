@@ -200,6 +200,9 @@ PRODUCT_PACKAGES += \
     SoundPickerPrebuilt
 
 # Weather
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.havoc.weather.revision=2
+
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml
 
