@@ -204,7 +204,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.lineage.weather.revision=2
 
 PRODUCT_COPY_FILES += \
-    vendor/lineage/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml
+    vendor/lineage/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
+    vendor/lineage/prebuilt/common/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
 
 # Substratum Key
 PRODUCT_COPY_FILES += \
