@@ -220,6 +220,12 @@ PRODUCT_PACKAGES += \
     SystemBlackTheme \
     SystemUIBlackTheme
 
+# Notification themes
+PRODUCT_PACKAGES += \
+    NotificationBlackTheme \
+    NotificationDarkTheme \
+    NotificationLightTheme
+
 # Accents
 PRODUCT_PACKAGES += \
     Amber \
