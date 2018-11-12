@@ -265,7 +265,14 @@ PRODUCT_PACKAGES += \
     QStileOreo \
     QStileOreoCircleTrim \
     QStileOreoSquircleTrim \
-    QStileSquircleTrim
+    QStileSquircleTrim \
+    QStileMountain \
+    QStileCircleDualTone \
+    QStileCircleGradient \
+    QStileDottedCircle \
+    QStileNinja \
+    QStilePokesign \
+    QStileWavey
 
 # QS header styles
 PRODUCT_PACKAGES += \
