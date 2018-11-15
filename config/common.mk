@@ -202,10 +202,12 @@ PRODUCT_PACKAGES += \
 # Weather
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lineage.weather.revision=2
+    WeatherProvider
 
+# WeatherProvider
 PRODUCT_COPY_FILES += \
-    vendor/lineage/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
-    vendor/lineage/prebuilt/common/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
+    vendor/lineage/prebuilt/common/etc/permissions/com.android.providers.weather.xml:system/etc/permissions/com.android.providers.weather.xml \
+    vendor/lineage/prebuilt/common/etc/default-permissions/com.android.providers.weather.xml:system/etc/default-permissions/com.android.providers.weather.xml
 
 # Substratum Key
 PRODUCT_COPY_FILES += \
