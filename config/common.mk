@@ -204,6 +204,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.lineage.weather.revision=2
     WeatherProvider
 
+# Fonts
+PRODUCT_PACKAGES += \
+    Arsenic-Fonts
+
 # WeatherProvider
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/permissions/com.android.providers.weather.xml:system/etc/permissions/com.android.providers.weather.xml \
