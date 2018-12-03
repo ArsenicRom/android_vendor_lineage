@@ -321,6 +321,11 @@ PRODUCT_PACKAGES += \
     QSHeaderAccent \
     QSHeaderTransparent
 
+# UI themes
+PRODUCT_PACKAGES += \
+    AOSPUI \
+    PixelUI
+
 # Sysconfig
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/sysconfig/google-hiddenapi-package-whitelist.xml:system/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
