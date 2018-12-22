@@ -196,6 +196,56 @@ PRODUCT_PACKAGES += \
     PixelLauncher \
     SoundPickerPrebuilt
 
+# Themes
+PRODUCT_PACKAGES += \
+    SettingsDarkTheme \
+    SystemDarkTheme \
+    SystemUIDarkTheme \
+    SettingsBlackTheme \
+    SystemBlackTheme \
+    SystemUIBlackTheme
+
+# Accents
+PRODUCT_PACKAGES += \
+    Amber \
+    Black \
+    Blue \
+    BlueGrey \
+    Brown \
+    Cyan \
+    DeepOrange \
+    DeepPurple \
+    Green \
+    Grey \
+    Indigo \
+    LightBlue \
+    LightGreen \
+    Lime \
+    Orange \
+    Pink \
+    Purple \
+    Red \
+    Teal \
+    Yellow \
+    White \
+    UserOne \
+    UserTwo \
+    UserThree \
+    UserFour \
+    UserFive \
+    UserSix \
+    UserSeven
+
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStileCircleTrim \
+    QStileDefault \
+    QStileDualToneCircle \
+    QStileOreo \
+    QStileOreoCircleTrim \
+    QStileOreoSquircleTrim \
+    QStileSquircleTrim
+
 # Sysconfig
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/sysconfig/google-hiddenapi-package-whitelist.xml:system/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
