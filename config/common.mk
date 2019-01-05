@@ -18,28 +18,17 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     keyguard.no_require_sim=true \
+    dalvik.vm.debug.alloc=0 \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.com.google.clientidbase=android-google \
-    ro.com.android.wifi-watchlist=GoogleGuest \
+    ro.error.receiver.system.apps=com.google.android.gms \
     ro.setupwizard.enterprise_mode=1 \
-    ro.setupwizard.network_required=false \
-    ro.setupwizard.gservices_delay=-1 \
     ro.com.android.dataroaming=false \
-    drm.service.enabled=true \
-    net.tethering.noprovisioning=true \
-    ro.adb.secure=0 \
-    ro.build.selinux=1 \
-    ro.setupwizard.rotation_locked=true \
+    ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
     ro.opa.eligible_device=true \
-    persist.sys.disable_rescue=true
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
-    ro.adb.secure=0 \
-    ro.debuggable=1 \
-    ro.secure=0 \
-    persist.service.adb.enable=1 \
-    persist.sys.usb.config=mtp,adb
+    ro.com.android.dateformat=MM-dd-yyyy \
+    ro.build.selinux=1 \
+    ro.carrier=unknown
 
 PRODUCT_PROPERTY_OVERRIDES := \
     persist.sys.wfd.nohdcp=1 \
@@ -94,6 +83,10 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 endif
+
+# Don't export PS1 in /system/etc/mkshrc.
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/etc/mkshrc:system/etc/mkshrc
 
 # Copy all Lineage-specific init rc files
 $(foreach f,$(wildcard vendor/lineage/prebuilt/common/etc/init/*.rc),\
@@ -163,7 +156,7 @@ PRODUCT_PACKAGES += \
 
 # Fix Google dialer
 PRODUCT_COPY_FILES += \
-    vendor/lineage/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+    vendor/lineage/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
@@ -173,10 +166,11 @@ PRODUCT_PACKAGES += \
 # Latin IME lib
 ifeq ($(TARGET_ARCH),arm64)
 PRODUCT_COPY_FILES += \
-    vendor/lineage/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+    vendor/lineage/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
     vendor/lineage/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
 else
 PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
     vendor/lineage/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
@@ -415,9 +409,9 @@ PRODUCT_PACKAGES += \
 
 # GBoard Themes
 PRODUCT_COPY_FILES += \
-    vendor/havoc/themes/GBoard/MD2.zip:system/etc/gboard/MD2.zip \
-    vendor/havoc/themes/GBoard/MD2Black.zip:system/etc/gboard/MD2Black.zip \
-    vendor/havoc/themes/GBoard/MD2Dark.zip:system/etc/gboard/MD2Dark.zip
+    vendor/lineage/themes/GBoard/MD2.zip:system/etc/gboard/MD2.zip \
+    vendor/lineage/themes/GBoard/MD2Black.zip:system/etc/gboard/MD2Black.zip \
+    vendor/lineage/themes/GBoard/MD2Dark.zip:system/etc/gboard/MD2Dark.zip
 
 # Set Pixel blue light MD2 theme on Gboard
 PRODUCT_PROPERTY_OVERRIDES += \
