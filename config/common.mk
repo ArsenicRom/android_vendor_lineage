@@ -174,6 +174,7 @@ PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
+<<<<<<< HEAD
 # Custom Lineage packages
 PRODUCT_PACKAGES += \
     AudioFX \
@@ -187,6 +188,14 @@ PRODUCT_PACKAGES += \
     Updater \
     WallpaperPicker \
     WeatherProvider
+
+# Do not include art debug targets
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
+# Strip the local variable table and the local variable type table to reduce
+# the size of the system image. This has no bearing on stack traces, but will
+# leave less information available via JDWP.
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
 # Arsenic Packages
 PRODUCT_PACKAGES += \
