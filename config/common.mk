@@ -169,7 +169,6 @@ PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
-<<<<<<< HEAD
 # Custom Lineage packages
 PRODUCT_PACKAGES += \
     AudioFX \
@@ -194,6 +193,7 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
 # Arsenic Packages
 PRODUCT_PACKAGES += \
+    CustomDoze \
     OmniStyle \
     PixelLauncher \
     SoundPickerPrebuilt
