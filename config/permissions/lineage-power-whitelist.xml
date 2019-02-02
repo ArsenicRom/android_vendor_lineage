@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2015 The Android Open Source Project
+<!-- Copyright (C) 2019 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,11 +14,6 @@
      limitations under the License.
 -->
 
-<resources>
-
-    <!-- Flags setup as productivity oriented in which case Downloads app will be presented
-             as Files app. Including showing of the Documents and "advanced" roots. -->
-    <bool name="show_documents_root">true</bool>
-
-    <string name="default_root_uri" translatable="false">content://com.android.externalstorage.documents/root/primary</string>
-</resources>
+<config>
+    <allow-in-power-save package="com.android.deskclock" />
+</config>
