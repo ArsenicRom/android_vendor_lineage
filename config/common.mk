@@ -194,6 +194,7 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
 # Arsenic Packages
 PRODUCT_PACKAGES += \
+    OmniStyle \
     PixelLauncher \
     SoundPickerPrebuilt
 
