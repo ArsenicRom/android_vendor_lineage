@@ -20,9 +20,6 @@ type Product_variables struct {
 	Device_support_wait_for_qsee struct {
 		Cflags []string
 	}
-	Apply_msm8974_1440p_egl_workaround struct {
-		Cflags []string
-	}
 	Has_legacy_camera_hal1 struct {
 		Cflags []string
 	}
@@ -66,15 +63,8 @@ type ProductVariables struct {
 	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
 	Device_support_hwfde  *bool `json:",omitempty"`
 	Device_support_hwfde_perf  *bool `json:",omitempty"`
-<<<<<<< HEAD
-	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
-=======
 	Device_support_legacy_hwfde  *bool `json:",omitempty"`
-<<<<<<< HEAD
->>>>>>> 56d5b0c... soong_config: Add flag for legacy HW FDE
-=======
 	Device_support_wait_for_qsee  *bool `json:",omitempty"`
->>>>>>> add9419... soong_config: Add flag for crypto waiting on QSEE to start
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Java_Source_Overlays *string `json:",omitempty"`
 	Should_skip_waiting_for_qsee  *bool `json:",omitempty"`

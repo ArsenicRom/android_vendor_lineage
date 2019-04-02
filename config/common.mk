@@ -200,7 +200,7 @@ PRODUCT_PACKAGES += \
 
 # Weather
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.weather.revision=2
+    ro.lineage.weather.revision=2 \
     WeatherProvider
 
 # WeatherProvider
